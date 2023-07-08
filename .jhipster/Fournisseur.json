@@ -1,0 +1,46 @@
+{
+  "applications": "*",
+  "entityTableName": "fournisseur",
+  "fields": [
+    {
+      "fieldName": "prenomNom",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "telephone",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "serviceOffert",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "solde",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "Fournisseur",
+  "relationships": [
+    {
+      "otherEntityName": "pres",
+      "otherEntityRelationshipName": "fournisseur",
+      "relationshipName": "pres",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "rembourser",
+      "otherEntityRelationshipName": "fournisseur",
+      "relationshipName": "rembourser",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "depense",
+      "otherEntityRelationshipName": "fournisseur",
+      "relationshipName": "depense",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ]
+}

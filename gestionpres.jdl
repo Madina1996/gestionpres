@@ -1,0 +1,53 @@
+ entity Compte {
+    restant Double, 
+    payer Double, 
+}
+
+entity Pres {
+	libelle String,
+    date String,
+    montant Double,    
+}
+
+entity Fournisseur {
+	prenomNom String,
+    telephone String,
+    serviceOffert String,
+    solde Double, 	   
+}
+
+entity Rembourser {
+	libelle String,
+    date String,
+    montant Double,	   
+}
+
+entity Depense {
+	libelle String,
+    date String,
+    montant Double,	   
+}
+entity Activite {
+	libelle String,
+    date String,   
+}
+
+relationship OneToMany {
+	Fournisseur to Pres{fournisseur},
+    Fournisseur to Rembourser{fournisseur},
+    Fournisseur to Depense{fournisseur},	 
+}
+
+
+
+
+
+ 
+ 
+
+
+ 
+
+
+
+ 

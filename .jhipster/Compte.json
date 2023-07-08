@@ -1,0 +1,16 @@
+{
+  "applications": "*",
+  "entityTableName": "compte",
+  "fields": [
+    {
+      "fieldName": "restant",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "payer",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "Compte",
+  "relationships": []
+}

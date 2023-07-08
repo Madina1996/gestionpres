@@ -1,0 +1,16 @@
+{
+  "applications": "*",
+  "entityTableName": "activite",
+  "fields": [
+    {
+      "fieldName": "libelle",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "date",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Activite",
+  "relationships": []
+}

@@ -1,0 +1,27 @@
+{
+  "applications": "*",
+  "entityTableName": "rembourser",
+  "fields": [
+    {
+      "fieldName": "libelle",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "date",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "montant",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "Rembourser",
+  "relationships": [
+    {
+      "otherEntityName": "fournisseur",
+      "relationshipName": "fournisseur",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ]
+}
