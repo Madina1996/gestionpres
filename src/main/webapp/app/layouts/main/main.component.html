@@ -5,8 +5,22 @@
 </div>
 
 <div class="container-fluid">
-  <div class="card jh-card">
-    <router-outlet></router-outlet>
+  <div class="d-flex row">
+    <!-- Sidebar -->
+
+    <div class="col-2" *ngIf="account !== null">
+      <div style="position: fixed; width: 15%">
+        <jhi-sidebare></jhi-sidebare>
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+    <!-- Page Content -->
+    <div class="col-10">
+      <div class="card jh-card">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
   </div>
 
   <jhi-footer></jhi-footer>

@@ -1,5 +1,6 @@
 {
   "applications": "*",
+  "changelogDate": "20230708120528",
   "entityTableName": "activite",
   "fields": [
     {
@@ -12,5 +13,6 @@
     }
   ],
   "name": "Activite",
-  "relationships": []
+  "relationships": [],
+  "searchEngine": "no"
 }

@@ -1,0 +1,36 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="activite">
+      <h2 data-cy="activiteDetailsHeading"><span jhiTranslate="gestionpresApp.activite.detail.title">Activite</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ activite.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="gestionpresApp.activite.libelle">Libelle</span></dt>
+        <dd>
+          <span>{{ activite.libelle }}</span>
+        </dd>
+        <dt><span jhiTranslate="gestionpresApp.activite.date">Date</span></dt>
+        <dd>
+          <span>{{ activite.date }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/activite', activite.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

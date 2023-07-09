@@ -1,0 +1,59 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-fournisseur-heading" data-cy="FournisseurCreateUpdateHeading">Create or edit a Fournisseur</h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="mb-3" *ngIf="editForm.controls.id.value !== null">
+          <label class="form-label" for="field_id">ID</label>
+          <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_prenomNom">Prenom Nom</label>
+          <input type="text" class="form-control" name="prenomNom" id="field_prenomNom" data-cy="prenomNom" formControlName="prenomNom" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_telephone">Telephone</label>
+          <input type="text" class="form-control" name="telephone" id="field_telephone" data-cy="telephone" formControlName="telephone" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_serviceOffert">Service Offert</label>
+          <input
+            type="text"
+            class="form-control"
+            name="serviceOffert"
+            id="field_serviceOffert"
+            data-cy="serviceOffert"
+            formControlName="serviceOffert"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_solde">Solde</label>
+          <input type="number" class="form-control" name="solde" id="field_solde" data-cy="solde" formControlName="solde" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span>Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span>Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

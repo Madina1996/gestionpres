@@ -1,5 +1,6 @@
 {
   "applications": "*",
+  "changelogDate": "20230708120531",
   "entityTableName": "fournisseur",
   "fields": [
     {
@@ -42,5 +43,6 @@
       "relationshipSide": "left",
       "relationshipType": "one-to-many"
     }
-  ]
+  ],
+  "searchEngine": "no"
 }

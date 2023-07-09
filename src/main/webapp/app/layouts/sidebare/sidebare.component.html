@@ -1,0 +1,11 @@
+<p-card [ngSwitch]="account !== null">
+  <div id="sidebar-wrapper" [ngClass]="'show'">
+    <div class="text-center">
+      <br />
+      <img src="../../../content/images/logo-jhipster.png" width="70%" />
+    </div>
+    <br />
+    <br />
+    <p-panelMenu [model]="items" [style]="{ width: '100%' }"></p-panelMenu>
+  </div>
+</p-card>

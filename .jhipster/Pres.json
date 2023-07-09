@@ -1,5 +1,6 @@
 {
   "applications": "*",
+  "changelogDate": "20230708120532",
   "entityTableName": "pres",
   "fields": [
     {
@@ -23,5 +24,6 @@
       "relationshipSide": "right",
       "relationshipType": "many-to-one"
     }
-  ]
+  ],
+  "searchEngine": "no"
 }
