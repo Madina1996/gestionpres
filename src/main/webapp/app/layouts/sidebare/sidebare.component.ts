@@ -86,24 +86,19 @@ export default class SidebareComponent implements OnInit {
           },
 
           {
-            label: 'Despense',
-            routerLink: ['depannage'],
+            label: 'Depense',
+            routerLink: ['depense'],
             icon: 'pi pi-fw pi-wrench',
           },
           {
-            label: 'Rembourser',
-            routerLink: ['voiture'],
-            icon: 'pi pi-fw pi-truck',
-          },
-          {
             label: 'Fournisseur',
-            routerLink: ['chauffeur'],
+            routerLink: ['fournisseur'],
             icon: 'pi pi-fw pi-users',
           },
           {
-            label: 'Activites',
-            icon: 'pi pi-fw pi-cog',
-            items: [{ label: 'Affectation', routerLink: ['conduire/new'] }, { separator: true }],
+            label: 'Activité',
+            routerLink: ['activite'],
+            icon: 'pi pi-fw pi-users',
           },
         ];
       }

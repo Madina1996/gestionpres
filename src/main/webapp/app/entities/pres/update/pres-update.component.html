@@ -18,12 +18,7 @@
 
         <div class="mb-3">
           <label class="form-label" for="field_date">Date</label>
-          <input type="text" class="form-control" name="date" id="field_date" data-cy="date" formControlName="date" />
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label" for="field_montant">Montant</label>
-          <input type="number" class="form-control" name="montant" id="field_montant" data-cy="montant" formControlName="montant" />
+          <input type="date" class="form-control" name="date" id="field_date" data-cy="date" formControlName="date" />
         </div>
 
         <div class="mb-3">
@@ -38,9 +33,14 @@
           >
             <option [ngValue]="null"></option>
             <option [ngValue]="fournisseurOption" *ngFor="let fournisseurOption of fournisseursSharedCollection">
-              {{ fournisseurOption.id }}
+              {{ fournisseurOption.prenomNom }}
             </option>
           </select>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_montant">Montant</label>
+          <input type="number" class="form-control" name="montant" id="field_montant" data-cy="montant" formControlName="montant" />
         </div>
       </div>
 

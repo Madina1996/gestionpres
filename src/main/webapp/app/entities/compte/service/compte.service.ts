@@ -34,6 +34,10 @@ export class CompteService {
     return this.http.get<ICompte>(`${this.resourceUrl}/${id}`, { observe: 'response' });
   }
 
+  findInfos(): Observable<EntityResponseType> {
+    return this.http.get<ICompte>(this.resourceUrl + '/getunique', { observe: 'response' });
+  }
+
   query(req?: any): Observable<EntityArrayResponseType> {
     const options = createRequestOption(req);
     return this.http.get<ICompte[]>(this.resourceUrl, { params: options, observe: 'response' });

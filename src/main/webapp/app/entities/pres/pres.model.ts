@@ -5,7 +5,9 @@ export interface IPres {
   libelle?: string | null;
   date?: string | null;
   montant?: number | null;
-  fournisseur?: Pick<IFournisseur, 'id'> | null;
+  payer?: number | null;
+  restant?: number | null;
+  fournisseur?: any | null;
 }
 
 export type NewPres = Omit<IPres, 'id'> & { id: null };

@@ -75,7 +75,7 @@
           <td>{{ pres.montant }}</td>
           <td>
             <div *ngIf="pres.fournisseur">
-              <a [routerLink]="['/fournisseur', pres.fournisseur.id, 'view']">{{ pres.fournisseur.id }}</a>
+              <a [routerLink]="['/fournisseur', pres.fournisseur.id, 'view']">{{ pres.fournisseur?.prenomNom }}</a>
             </div>
           </td>
           <td class="text-end">

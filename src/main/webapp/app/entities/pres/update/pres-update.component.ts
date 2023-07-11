@@ -39,6 +39,7 @@ export class PresUpdateComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.data.subscribe(({ pres }) => {
       this.pres = pres;
+      console.log(pres);
       if (pres) {
         this.updateForm(pres);
       }
@@ -54,6 +55,8 @@ export class PresUpdateComponent implements OnInit {
   save(): void {
     this.isSaving = true;
     const pres = this.presFormService.getPres(this.editForm);
+    console.log(pres);
+
     if (pres.id !== null) {
       this.subscribeToSaveResponse(this.presService.update(pres));
     } else {

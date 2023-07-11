@@ -26,10 +26,18 @@
         <dd>
           <span>{{ pres.montant }}</span>
         </dd>
+        <dt><span>Payer</span></dt>
+        <dd>
+          <span>{{ pres.payer }}</span>
+        </dd>
+        <dt><span>Restant</span></dt>
+        <dd>
+          <span>{{ pres.restant }}</span>
+        </dd>
         <dt><span>Fournisseur</span></dt>
         <dd>
           <div *ngIf="pres.fournisseur">
-            <a [routerLink]="['/fournisseur', pres.fournisseur.id, 'view']">{{ pres.fournisseur.id }}</a>
+            <a [routerLink]="['/fournisseur', pres.fournisseur.id, 'view']">{{ pres.fournisseur.prenomNom }}</a>
           </div>
         </dd>
       </dl>
@@ -40,6 +48,9 @@
 
       <button type="button" [routerLink]="['/pres', pres.id, 'edit']" class="btn btn-primary">
         <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+      </button>
+      <button type="button" [routerLink]="['/pres', pres.id, 'edit']" class="btn btn-warning">
+        <fa-icon icon="arrow-right"></fa-icon>&nbsp;<span>Rembourser</span>
       </button>
     </div>
   </div>

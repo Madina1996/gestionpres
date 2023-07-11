@@ -160,6 +160,8 @@ public class PresResource {
     public ResponseEntity<Pres> getPres(@PathVariable Long id) {
         log.debug("REST request to get Pres : {}", id);
         Optional<Pres> pres = presRepository.findById(id);
+
+        System.out.println(pres.get());
         return ResponseUtil.wrapOrNotFound(pres);
     }
 

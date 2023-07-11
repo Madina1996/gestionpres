@@ -29,6 +29,12 @@ public class Pres implements Serializable {
     @Column(name = "montant")
     private Double montant;
 
+    @Column(name = "restant")
+    private Double restant;
+
+    @Column(name = "payer")
+    private Double payer;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JsonIgnoreProperties(value = { "pres", "remboursers", "depenses" }, allowSetters = true)
     private Fournisseur fournisseur;
@@ -119,14 +125,43 @@ public class Pres implements Serializable {
         return getClass().hashCode();
     }
 
-    // prettier-ignore
     @Override
     public String toString() {
-        return "Pres{" +
-            "id=" + getId() +
-            ", libelle='" + getLibelle() + "'" +
-            ", date='" + getDate() + "'" +
-            ", montant=" + getMontant() +
-            "}";
+        return (
+            "Pres{" +
+            "id=" +
+            id +
+            ", libelle='" +
+            libelle +
+            '\'' +
+            ", date='" +
+            date +
+            '\'' +
+            ", montant=" +
+            montant +
+            ", restant=" +
+            restant +
+            ", payer=" +
+            payer +
+            ", fournisseur=" +
+            fournisseur +
+            '}'
+        );
+    }
+
+    public Double getRestant() {
+        return restant;
+    }
+
+    public void setRestant(Double restant) {
+        this.restant = restant;
+    }
+
+    public Double getPayer() {
+        return payer;
+    }
+
+    public void setPayer(Double payer) {
+        this.payer = payer;
     }
 }

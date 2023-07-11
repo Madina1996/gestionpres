@@ -11,16 +11,16 @@
     <property name="datetimeType" value="datetime" dbms="postgresql"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
-<!--    <include file="config/liquibase/changelog/20230708120528_added_entity_Activite.xml" relativeToChangelogFile="false"/>-->
-<!--    <include file="config/liquibase/changelog/20230708120529_added_entity_Compte.xml" relativeToChangelogFile="false"/>-->
-<!--    <include file="config/liquibase/changelog/20230708120530_added_entity_Depense.xml" relativeToChangelogFile="false"/>-->
-<!--    <include file="config/liquibase/changelog/20230708120531_added_entity_Fournisseur.xml" relativeToChangelogFile="false"/>-->
-<!--    <include file="config/liquibase/changelog/20230708120532_added_entity_Pres.xml" relativeToChangelogFile="false"/>-->
-<!--    <include file="config/liquibase/changelog/20230708120533_added_entity_Rembourser.xml" relativeToChangelogFile="false"/>-->
-<!--    &lt;!&ndash; jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here &ndash;&gt;-->
-<!--    <include file="config/liquibase/changelog/20230708120530_added_entity_constraints_Depense.xml" relativeToChangelogFile="false"/>-->
-<!--    <include file="config/liquibase/changelog/20230708120532_added_entity_constraints_Pres.xml" relativeToChangelogFile="false"/>-->
-<!--    <include file="config/liquibase/changelog/20230708120533_added_entity_constraints_Rembourser.xml" relativeToChangelogFile="false"/>-->
-    <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
-    <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20230708120528_added_entity_Activite.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230708120529_added_entity_Compte.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230708120530_added_entity_Depense.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230708120531_added_entity_Fournisseur.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230708120532_added_entity_Pres.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230708120533_added_entity_Rembourser.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20230708120530_added_entity_constraints_Depense.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230708120532_added_entity_constraints_Pres.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230708120533_added_entity_constraints_Rembourser.xml" relativeToChangelogFile="false"/>
+<!--     jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here-->
+<!--     jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here-->
 </databaseChangeLog>

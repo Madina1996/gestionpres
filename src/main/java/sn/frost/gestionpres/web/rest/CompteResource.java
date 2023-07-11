@@ -162,6 +162,22 @@ public class CompteResource {
         return ResponseUtil.wrapOrNotFound(compte);
     }
 
+    @GetMapping("/comptes/getunique")
+    public ResponseEntity<Compte> getunique() {
+        log.debug("REST request to get Compte : {}");
+        List<Compte> lc = compteRepository.findAll();
+        if (lc.size() == 0) {
+            this.initCompte();
+            lc = compteRepository.findAll();
+        }
+        Compte c = new Compte();
+        for (Compte compte : lc) {
+            c = compte;
+        }
+
+        return ResponseUtil.wrapOrNotFound(Optional.of(c));
+    }
+
     /**
      * {@code DELETE  /comptes/:id} : delete the "id" compte.
      *
@@ -176,5 +192,20 @@ public class CompteResource {
             .noContent()
             .headers(HeaderUtil.createEntityDeletionAlert(applicationName, false, ENTITY_NAME, id.toString()))
             .build();
+    }
+
+    private void initCompte() {
+        List<Compte> lc = compteRepository.findAll();
+        if (lc.size() > 0) {
+            return;
+        }
+
+        Compte compte = new Compte();
+        compte.setPayer(Double.valueOf(0));
+        compte.setRestant(Double.valueOf(0));
+
+        compteRepository.save(compte);
+
+        return;
     }
 }
