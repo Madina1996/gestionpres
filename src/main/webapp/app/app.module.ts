@@ -19,7 +19,6 @@ import { httpInterceptorProviders } from 'app/core/interceptor/index';
 import MainComponent from './layouts/main/main.component';
 import MainModule from './layouts/main/main.module';
 import { AppPageTitleStrategy } from './app-page-title-strategy';
-import { SidebareComponent } from './layouts/sidebare/sidebare.component';
 
 @NgModule({
   imports: [

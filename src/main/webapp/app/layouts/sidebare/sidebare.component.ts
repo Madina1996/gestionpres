@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { AccountService } from 'app/core/auth/account.service';
 import { Account } from '../../core/auth/account.model';
@@ -41,7 +41,7 @@ import { ScrollPanelModule } from 'primeng/scrollpanel';
     ScrollPanelModule,
   ],
 })
-export class SidebareComponent {
+export default class SidebareComponent implements OnInit {
   items: MenuItem[] = [];
   account: Account | null = null;
 

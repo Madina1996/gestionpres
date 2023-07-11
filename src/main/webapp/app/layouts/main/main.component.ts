@@ -8,7 +8,7 @@ import { Account } from '../../core/auth/account.model';
 @Component({
   selector: 'jhi-main',
   templateUrl: './main.component.html',
-  styleUrls: ['./sidebare.component.scss'],
+  styleUrls: ['./main.component.scss'],
   providers: [AppPageTitleStrategy],
 })
 export default class MainComponent implements OnInit {
